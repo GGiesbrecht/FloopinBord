@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    void Start() {
-        
-    }
+    public Animator birdAnimator;
+    public Animator playButtonAnimator;
+    public Animator blackScreenAnimator;
 
-    void Update() {
-        
+    public void Play() {
+        birdAnimator.SetBool("GameStarted", true);
+        playButtonAnimator.SetBool("GameStarted", true);
+        blackScreenAnimator.SetBool("GameStarted", true);
     }
 }
