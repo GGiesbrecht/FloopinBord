@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 131293245}
   - component: {fileID: 131293246}
   m_Layer: 0
-  m_Name: bush
+  m_Name: Bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,8 +215,10 @@ GameObject:
   m_Component:
   - component: {fileID: 143277092}
   - component: {fileID: 143277093}
+  - component: {fileID: 143277094}
+  - component: {fileID: 143277095}
   m_Layer: 0
-  m_Name: black
+  m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +279,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_Sprite: {fileID: 21300000, guid: 6aeb2d9ba6edab34bae2b21c0936d083, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -287,6 +289,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &143277094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143277091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd498fcfa3a74f94cab466df3da8fcf9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &143277095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143277091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5316a63c2a51745499ea75ec1dad76c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdAnimator: {fileID: 0}
+  playButtonAnimator: {fileID: 0}
+  blackScreenAnimator: {fileID: 143277094}
 --- !u!1 &351258253
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdAnimator: {fileID: 1374788629}
   playButtonAnimator: {fileID: 540512790}
-  canvasAnimator: {fileID: 0}
+  blackScreenAnimator: {fileID: 0}
 --- !u!4 &351258255
 Transform:
   m_ObjectHideFlags: 0
@@ -426,7 +462,7 @@ GameObject:
   - component: {fileID: 450167102}
   - component: {fileID: 450167103}
   m_Layer: 0
-  m_Name: cloud-long
+  m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1167,7 +1203,7 @@ GameObject:
   - component: {fileID: 938950394}
   - component: {fileID: 938950395}
   m_Layer: 0
-  m_Name: tracks
+  m_Name: Tracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,7 +1387,7 @@ GameObject:
   - component: {fileID: 1095649273}
   - component: {fileID: 1095649274}
   m_Layer: 0
-  m_Name: ground
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1434,7 +1470,7 @@ GameObject:
   - component: {fileID: 1320804952}
   - component: {fileID: 1320804953}
   m_Layer: 0
-  m_Name: Floopin Bord
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1537,7 +1573,7 @@ GameObject:
   - component: {fileID: 1374788629}
   - component: {fileID: 1374788631}
   m_Layer: 0
-  m_Name: bird
+  m_Name: Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1636,9 +1672,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1374788627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b58dad55cfcf54abde77f4c5eadaaa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5316a63c2a51745499ea75ec1dad76c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  birdAnimator: {fileID: 1374788629}
+  playButtonAnimator: {fileID: 0}
+  blackScreenAnimator: {fileID: 143277094}
 --- !u!1 &1440239931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1771,7 @@ GameObject:
   - component: {fileID: 1489436895}
   - component: {fileID: 1489436896}
   m_Layer: 0
-  m_Name: log
+  m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
